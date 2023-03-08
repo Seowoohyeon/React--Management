@@ -1,3 +1,6 @@
+## Management System
+This project is a customer management system created for React lecture purposes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
