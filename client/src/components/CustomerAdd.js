@@ -20,6 +20,7 @@ class CustomerAdd extends React.Component {
         this.addCustomer()
             .then((response) => {
                 console.log(response.data)
+                this.props.stateRefresh()
             })
         this.setState({
             files: null,
@@ -29,7 +30,6 @@ class CustomerAdd extends React.Component {
             job: '',
             fileName: ''
         })
-        window.location.reload()
     }
 
     // 파일값이 변경 함수
@@ -53,7 +53,7 @@ class CustomerAdd extends React.Component {
     }
 
     addCustomer() {
-        const url = 'http://localhost:5000/api/customer' 
+        const url = 'http://localhost:5000/api/customers' 
         const formData = new FormData()
 
         console.log(formData)
