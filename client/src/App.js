@@ -48,6 +48,8 @@ class App extends Component {
     }
   }
 
+
+
   stateRefresh = () => {
     this.setState({
       customers: '',
@@ -92,6 +94,7 @@ class App extends Component {
                 <TableCell>생년월일</TableCell>
                 <TableCell>성별</TableCell>
                 <TableCell>직업</TableCell>
+                <TableCell>설정</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -101,6 +104,7 @@ class App extends Component {
                   return (
                     <Customer
                       // map 을 이용하여 하나의 원소의 다수의 정보를 출력할 때는 key=? 를 지정해 줘야 오류가 안남
+                      stateRefresh={this.stateRefresh}
                       key={i.id}
                       id={i.id}
                       image={i.image}
@@ -125,5 +129,6 @@ class App extends Component {
     )
   };
 }
+
 
 export default withStyles(styles)(App);
